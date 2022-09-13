@@ -1,0 +1,23 @@
+<p>get-all-drivers works!</p>
+<h1 style="text-align:center">Drivers List</h1>
+<br>
+<table class="table table-bordered table-center table-hover" style="width:70%">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">License Number</th>
+        <th scope="col">Name</th>
+        <th scope="col"> Age</th>
+        <th scope="col">Vehicle Type</th>
+        
+      </tr>
+    </thead>
+    <tbody *ngIf="drivers.length">
+        
+            <tr *ngFor="let driver of drivers; index as i" >
+                <td>{{driver?.driverId}}</td>
+                <td>{{driver?.name}}</td>
+                <td>{{driver?. age}}</td>
+                <td>{{driver?.vehicleType}}</td>
+            </tr>
+    </tbody>
+  </table>

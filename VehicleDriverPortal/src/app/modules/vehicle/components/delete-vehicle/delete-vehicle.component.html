@@ -1,0 +1,24 @@
+<div style="height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Delete Vehicle</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="deleteVehicle()" [formGroup]="form">
+							<div class="form-group">
+								<input class="form-control remove-symbols" type="number" placeholder="Registration Number"  required formControlName="vehicleId">
+								<span class="form-label">Registration Number</span>
+							</div>
+                           
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

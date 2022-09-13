@@ -1,0 +1,63 @@
+<div style="height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Booking Details</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="getBookingById()" [formGroup]="form">
+							<div class="form-group">
+								<input class="form-control remove-symbols" type="number" placeholder="Booking ID"  required formControlName="booking_ID">
+								<span class="form-label">Booking ID</span>
+							</div>
+                           
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+    <div *ngIf="booking">
+        <table class="table table-bordered table-center" style="width:70%">
+            <thead>
+              <tr>
+                <th scope="col">Driver </th>
+                <th scope="col">Vehicle ID</th>
+                <th scope="col">From Location</th>
+                <th scope="col">To Location</th>
+                
+                <th scope="col">Distance</th>
+                <th scope="col">Trip Fare</th>
+                <th scope="col">Fuel Expense</th>
+                <th scope="col">Driver Share</th>
+              </tr>
+            </thead>
+            <tbody >
+                
+                    <tr  >
+                        <td>{{booking.driverId}}</td>
+                        <td>{{booking.vehicleId}}</td>
+                        <td>{{booking.fromLocation}}</td>
+                        <td>{{booking.toLocation}}</td>
+                       
+                        <td>{{booking.distance}}</td>
+                        <td>{{booking.tripFare}}</td>
+                        <td>{{booking.fuelExpense}}</td>
+                        <td>{{booking.driverShare}}</td>
+                    </tr>
+        
+                
+            </tbody>
+          </table>
+          
+    
+    </div>
+</div><!-- This templates was made by Colorlib (https://colorlib.com) -->
+<br>

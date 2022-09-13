@@ -1,0 +1,58 @@
+
+<div style="height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Vehicle Detail</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="getVehiclesByType()" [formGroup]="form">
+							<div class="form-group">
+								<input class="form-control remove-symbols" type="string" placeholder="Vehicle Type"  required formControlName="vehicleType">
+								<span class="form-label">Vehicle Type</span>
+							</div>
+                           
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+    <div *ngIf="vehicles.length">
+        <table class="table table-bordered table-center" style="width:70%">
+            <thead>
+              <tr>
+                <th scope="col">Registration Number </th>
+                <th scope="col">Model Name</th>
+                <th scope="col">Vehicle Type</th>
+                <th scope="col">Number Of Seat</th>
+                <th scope="col">Ac Available</th>
+              </tr>
+            </thead>
+            <tbody >
+                
+                    <tr  *ngFor="let vehicle of vehicles; index as i">
+                        <td>{{vehicle.registrationNo}}</td>
+                        <td>{{vehicle.modelName}}</td>
+                        <td>{{vehicle.vehicleType}}</td>
+                        <td>{{vehicle.numberOfSeat}}</td>
+                        <td>{{vehicle.acAvailable}}</td>
+                    </tr>
+        
+                
+            </tbody>
+          </table>
+          
+    
+    </div>
+</div><!-- This templates was made by Colorlib (https://colorlib.com) -->
+<br>
+
+  

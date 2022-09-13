@@ -1,0 +1,80 @@
+<!-- <p>add-vehicle works!</p> -->
+<div style="background-color:#1e232c;height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Register Vehicle</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="addVehicle()" [formGroup]="form">
+							<div class="form-group">
+								<input class="form-control remove-symbols" type="number" placeholder="Registration Number"  required formControlName="registraionNo">
+								<span class="form-label">Registration Number</span>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Model Name" formControlName="modelName" required>
+										<span class="form-label">Model Name</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Vehicle Type" formControlName="vehicleType" required>
+										<span class="form-label">Vehicle Type</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control remove-symbols" type="number" placeholder="Number Of Seats" formControlName="numberOfSeat" required>
+										<span class="form-label">Number Of Seats</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<!-- <input class="form-control" type="text" placeholder="Ac Available" formControlName="avAvailable" required> -->
+										<select formControlName="acAvailable" class="form-control">      
+                                            <option value="0" selected>Ac Available</option> 
+											<option value="Yes" selected>Yes</option> 
+											<option value="No" selected>No</option> 
+                                        </select>
+										<span class="form-label">Ac Available</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Add Vehicle</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="js/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script> -->
+
+</div><!-- This templates was made by Colorlib (https://colorlib.com) -->

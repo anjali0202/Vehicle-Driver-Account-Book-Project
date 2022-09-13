@@ -1,0 +1,29 @@
+
+<h1 style="text-align:center">Vehicle Details</h1>
+<br>
+<table class="table table-hover" style="width:70%">
+    <thead>
+      <tr>
+        <th scope="col">Registration Number </th>
+        <th scope="col">Model Name</th>
+        <th scope="col">Vehicle Type</th>
+        <th scope="col">Number Of Seat</th>
+        <th scope="col">Ac Available</th>
+        
+      </tr>
+    </thead>
+    <tbody *ngIf="vehicles.length">
+        
+            <tr *ngFor="let vehicle of vehicles; index as i" >
+                <td>{{vehicle?.registrationNo}}</td>
+                <td>{{vehicle?.modelName}}</td>
+                <td>{{vehicle?.vehicleType}}</td>
+                <td>{{vehicle?.numberOfSeat}}</td>
+                <td>{{vehicle?.acAvailable}}</td>
+               
+            </tr>
+
+        
+    </tbody>
+  </table>
+  

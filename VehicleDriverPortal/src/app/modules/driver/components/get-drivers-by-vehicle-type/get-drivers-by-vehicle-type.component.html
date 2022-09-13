@@ -1,0 +1,58 @@
+
+<div class="first" style="height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Driver By Vehicle Type</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="getDriversByVehicleType()" [formGroup]="form">
+							<div class="form-group">
+								<input class="form-control remove-symbols" type="text" placeholder="Vehicle Type"  required formControlName="vehicleType">
+								<span class="form-label">Vehicle Type</span>
+							</div>
+                           
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+    <div *ngIf="drivers.length">
+        <table class="table table-bordered table-center" style="width:70%">
+            <thead>
+              <tr>
+                <th scope="col">License Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+              
+              </tr>
+            </thead>
+            <tbody >
+                
+                    <tr *ngFor="let driver of drivers; index as i" >
+                        <td>{{driver.driverId}}</td>
+                        <td>{{driver.name}}</td>
+                        <td>{{driver.age}}</td>
+                        
+                       
+                        
+                    </tr>
+        
+                
+            </tbody>
+          </table>
+          
+    
+    </div>
+</div><!-- This templates was made by Colorlib (https://colorlib.com) -->
+<br>
+
+

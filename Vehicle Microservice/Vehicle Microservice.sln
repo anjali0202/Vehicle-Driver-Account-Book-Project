@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicle Microservice", "Vehicle Microservice.csproj", "{AD8692E6-A572-473E-B102-0D088D14D6AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD8692E6-A572-473E-B102-0D088D14D6AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD8692E6-A572-473E-B102-0D088D14D6AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD8692E6-A572-473E-B102-0D088D14D6AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD8692E6-A572-473E-B102-0D088D14D6AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEE90D26-B811-4F54-B617-5232E014BD83}
+	EndGlobalSection
+EndGlobal

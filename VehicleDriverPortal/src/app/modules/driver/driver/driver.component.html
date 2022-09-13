@@ -1,0 +1,39 @@
+
+<div class="outerdiv" style="height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Driver Home</h1>
+						</div>
+						<form style="height: 40%;" >
+							<!-- <div class="form-group">
+								<input class="form-control remove-symbols" type="number" placeholder="Booking ID"  required formControlName="booking_ID">
+								<span class="form-label">Booking ID</span>
+							</div> -->
+                           
+							<div class="form-btn">
+								<button class="submit-btn" type="submit"><a style="color: white;" routerLink="/driver/get-all-drivers">Driver Details</a></button>
+							</div>
+                            <br>
+                            <div class="form-btn">
+								<button class="submit-btn" type="submit"><a style="color: white;" routerLink="/driver/add-driver">Register Driver</a></button>
+							</div>
+                            <br>
+                            <div class="form-btn">
+								<button class="submit-btn" type="submit"><a style="color: white;" routerLink="/driver/get-drivers-by-vehicle-type">Drivers By Vehicle Type</a></button>
+							</div>
+                            <br>
+                            <div class="form-btn">
+								<button class="submit-btn" type="submit"><a style="color: white;" routerLink="/driver/delete-driver">Delete Driver</a></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<router-outlet></router-outlet>

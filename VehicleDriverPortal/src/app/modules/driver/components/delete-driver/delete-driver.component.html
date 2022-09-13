@@ -1,0 +1,26 @@
+<p>delete-driver works!</p>
+
+<div style="height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Delete Driver</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="deleteDriver()" [formGroup]="form">
+							<div class="form-group">
+								<input class="form-control remove-symbols" type="number" placeholder="License Number"  required formControlName="driverId">
+								<span class="form-label">License Number</span>
+							</div>
+                           
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

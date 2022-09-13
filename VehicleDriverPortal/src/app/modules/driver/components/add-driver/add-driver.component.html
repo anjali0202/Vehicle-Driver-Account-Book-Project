@@ -1,0 +1,62 @@
+
+<!-- <p>add-vehicle works!</p> -->
+<div style="background-color:beige;height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Register Driver</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="addDriver()" [formGroup]="form">
+							<!-- <div class="form-group">
+								<input class="form-control remove-symbols" type="number" placeholder="License Number"  required formControlName="driverId">
+								<span class="form-label">License Number</span>
+							</div> -->
+                            <div class="form-group">
+								<input class="form-control remove-symbols" type="text" placeholder="Driver Name"  required formControlName="name">
+								<span class="form-label">Driver Name</span>
+							</div>
+                            <div class="form-group">
+								<input class="form-control remove-symbols" type="number" placeholder="Driver Age"  required formControlName="driverAge">
+								<span class="form-label">Driver Age</span>
+							</div>
+                            <div class="form-group">
+								<input class="form-control remove-symbols" type="text" placeholder="Vehicle Type"  required formControlName="vehicleType">
+								<span class="form-label">Vehicle Type</span>
+							</div>
+							
+							
+							
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Add Driver</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="js/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script> -->
+
+</div><!-- This templates was made by Colorlib (https://colorlib.com) -->

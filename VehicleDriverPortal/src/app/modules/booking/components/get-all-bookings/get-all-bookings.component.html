@@ -1,0 +1,38 @@
+<p>get-all-bookings works!</p>
+
+  <h1 style="text-align:center">Bookings</h1>
+<br>
+<table class="table table-bordered table-center" style="width:70%">
+    <thead>
+      <tr>
+        <th scope="col">Driver </th>
+        <th scope="col">Vehicle ID</th>
+        <th scope="col">From Location</th>
+        <th scope="col">To Location</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Distance</th>
+        <th scope="col">Trip Fare</th>
+        <th scope="col">Fuel Expense</th>
+        <th scope="col">Driver Share</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="bookings.length">
+        
+            <tr *ngFor="let booking of bookings; index as i" >
+                <td>{{booking?.driverId}}</td>
+                <td>{{booking?.vehicleId}}</td>
+                <td>{{booking?.fromLocation}}</td>
+                <td>{{booking?.toLocation}}</td>
+                <td>{{booking?.startDateTime}}</td>
+                <td>{{booking?.endDateTime}}</td>
+                <td>{{booking?.distance}}</td>
+                <td>{{booking?.tripFare}}</td>
+                <td>{{booking?.fuelExpense}}</td>
+                <td>{{booking?.driverShare}}</td>
+            </tr>
+
+        
+    </tbody>
+  </table>
+  

@@ -1,0 +1,161 @@
+<!-- <p>add-booking works!</p>
+<form method="POST" class="register-form" id="register-form"
+                 #demoForm="ngForm" [formGroup]="form" (ngSubmit)="addbooking()">
+
+<select formControlName="driverId" name="" id="">      
+    <option *ngFor="let driver of availableDriverVehicle?.drivers" [value]="driver?.driverId">{{driver?.name}}-heavy-driver</option>
+</select>
+<select formControlName="vehicleId" name="" id="">      
+    <option *ngFor="let vehicle of availableDriverVehicle?.vehicles" [value]="vehicle?.registrationNo">{{vehicle?.registrationNo}}-Vehicle</option>
+</select>
+<button type="submit">Submit</button>
+ -->
+
+
+
+
+<div style="background-color:beige;height: fit-content;">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Add Booking</h1>
+						</div>
+						<form style="height: 40%;" (ngSubmit)="addbooking()" [formGroup]="form">
+							<!-- <div class="form-group">
+								<input class="form-control" type="number" placeholder="Booking ID"  required formControlName="booking_ID">
+								<span class="form-label">BookingID</span>
+							</div> -->
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date" formControlName="startDateTime" required>
+										<span class="form-label">From Date</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date" formControlName="endDateTime" required>
+										<span class="form-label">To Date</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="From Location" formControlName="fromLocation" required>
+										<span class="form-label">From Location</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="To Location" formControlName="toLocation" required>
+										<span class="form-label">To Location</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<!-- <input class="form-control" type="text" placeholder="Driver" formControlName="driverId"  required> -->
+                                        <select formControlName="driverId" class="form-control" > 
+                                            <option value="0" selected>Select Driver</option>     
+
+                                            <option *ngFor="let driver of availableDriverVehicle?.drivers" [value]="driver?.driverId">{{driver?.name}}-heavy-driver</option>
+                                        </select>
+										<span class="form-label">Driver</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<!-- <input class="form-control" type="text" placeholder="Vehicle" formControlName="vehicleId" required> -->
+                                        <select formControlName="vehicleId" class="form-control">      
+                                            <option value="0" selected>Select Vehicle</option> 
+                                            <option *ngFor="let vehicle of availableDriverVehicle?.vehicles" [value]="vehicle?.registrationNo">{{vehicle?.registrationNo}}-Vehicle</option>
+                                        </select>
+										<span class="form-label">Vehicle</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4" >
+									<div class="form-group">
+										<div class="form-group" >
+											<input class="form-control remove-symbols"  type="number" formControlName="tripFare" placeholder="Trip Fare" required>
+											<span class="form-label">Trip Fare</span>
+										</div>
+										<span class="form-label">Trip Fare</span>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-group">
+											<input class="form-control remove-symbols"  type="number" formControlName="fuelExpense" placeholder="Fuel Expense" required>
+											<span class="form-label">Fuel Expense</span>
+										</div>
+										
+										<span class="form-label">Fuel Expense</span>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-group">
+											<input class="form-control remove-symbols"  type="number" formControlName="driverShare" placeholder="Driver Share" required>
+											<span class="form-label">Driver Share</span>
+										</div>
+										<span class="form-label">Driver Share</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<input class="form-control" type="text" formControlName="bookingType" placeholder="Booking Type" required>
+									<span class="form-label">Booking Type</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control remove-symbols" type="number" formControlName="distance" placeholder="Distance">
+										<span class="form-label">Distance</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="text" formControlName="remarks" placeholder="Remarks">
+										<span class="form-label">Remarks</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn" type="submit">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="js/jquery.min.js"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script> -->
+
+</div><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
